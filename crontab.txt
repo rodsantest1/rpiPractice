@@ -1,0 +1,73 @@
+parallels@debian-gnu-linux-vm:~/Documents/gth/rpiPractice$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	hello.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+parallels@debian-gnu-linux-vm:~/Documents/gth/rpiPractice$ git add .
+parallels@debian-gnu-linux-vm:~/Documents/gth/rpiPractice$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   hello.py
+
+parallels@debian-gnu-linux-vm:~/Documents/gth/rpiPractice$ git commit -m "Hello Raspberry Pi"
+[master cb01116] Hello Raspberry Pi
+ Committer: Parallels <parallels@debian-gnu-linux-vm.localdomain>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello.py
+parallels@debian-gnu-linux-vm:~/Documents/gth/rpiPractice$ push
+bash: push: command not found
+parallels@debian-gnu-linux-vm:~/Documents/gth/rpiPractice$ git push
+Username for 'https://github.com': rodsantest1
+Password for 'https://rodsantest1@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 350 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/rodsantest1/rpiPractice.git
+   0f190ff..cb01116  master -> master
+parallels@debian-gnu-linux-vm:~/Documents/gth/rpiPractice$ crontab -l
+# Edit this file to introduce tasks to be run by cron.
+# 
+# Each task to run has to be defined through a single line
+# indicating with different fields when the task will be run
+# and what command to run for the task
+# 
+# To define the time you can provide concrete values for
+# minute (m), hour (h), day of month (dom), month (mon),
+# and day of week (dow) or use '*' in these fields (for 'any').# 
+# Notice that tasks will be started based on the cron's system
+# daemon's notion of time and timezones.
+# 
+# Output of the crontab jobs (including errors) is sent through
+# email to the user the crontab file belongs to (unless redirected).
+# 
+# For example, you can run a backup of all your user accounts
+# at 5 a.m every week with:
+# 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/
+# 
+# For more information see the manual pages of crontab(5) and cron(8)
+# 
+# m h  dom mon dow   command
+
+* * * * * cd Desktop && python hello.py >> test.out
+
