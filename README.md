@@ -7,4 +7,5 @@ VS Code blank screen start up issue
 Resolution:  
 ```code . --disable-gpu```
 
-Deleted keyring login  so I can push to GitHub from vscode
+Deleted keyring login  so I can push to GitHub from vscode.
+```Goto Activities and search for keys.```
