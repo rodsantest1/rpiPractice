@@ -1,6 +1,14 @@
 # rpiPractice
 Raspberry Pi code practice  
 
+5/22/20
+https://janakiev.com/blog/python-background/
+shebang
+https://youtu.be/7tYEsT2dzlo 
+
+
+
+
 Raspberry Pi 3  
 VS Code blank screen start up issue  
 
